@@ -1,69 +1,59 @@
-# React + TypeScript + Vite
+# Frontend Project README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a frontend web application developed with **React**, **TypeScript**, and **Vite**. Its main purpose is to manage **user registration** and **login**, interacting with a backend service for authentication and other operations.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Link Production
 
-## Expanding the ESLint configuration
+https://68a69934c2778511a4eda598--rococo-profiterole-5ce870.netlify.app
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+To run the project in your local development environment, follow these steps:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1. Environment Variables
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This project connects to a backend. The backend host URL is configured via an environment variable. Create a `.env` file in the root of your project with the following format:
+
+```dotenv
+VITE_BACKEND_HOST=[https://back-github.arturoverbel.com](https://back-github.arturoverbel.com)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Make sure to replace https://back-github.arturoverbel.com with the actual URL of your backend API.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 2. Install Dependencies
+Navigate to the project's root directory and install all necessary dependencies:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Run the Project
+Once the dependencies are installed, you can start the development server:
+
+```bash
+npm run dev
+```
+This will start the application in development mode, usually accessible at http://localhost:5173.
+
+## ⚙️ Deployment
+This project is configured for manual deployment using Netlify.
+
+To deploy a new version:
+
+1. Generate the production build:
+
+```bash
+npm run build
+```
+This command will create a dist/ folder with optimized files for production.
+
+2. Manual deployment to Netlify:
+Access your project's Netlify dashboard. Drag and drop the contents of the dist/ folder into the deployments section to update your site.
+
+## 🛠️ Technologies Used
+- React: JavaScript library for building user interfaces.
+- TypeScript: A superset of JavaScript that adds static typing.
+- Vite: Next-generation frontend build tool.
+
+Thank you for checking out the project!
