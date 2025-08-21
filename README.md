@@ -16,7 +16,7 @@ To run the project in your local development environment, follow these steps:
 This project connects to a backend. The backend host URL is configured via an environment variable. Create a `.env` file in the root of your project with the following format:
 
 ```dotenv
-VITE_BACKEND_HOST=[https://back-github.arturoverbel.com](https://back-github.arturoverbel.com)
+VITE_BACKEND_HOST=https://back-github.arturoverbel.com
 ```
 
 Make sure to replace https://back-github.arturoverbel.com with the actual URL of your backend API.
